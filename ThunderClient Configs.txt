@@ -1,0 +1,41 @@
+Método GET
+	http://127.0.0.1:5000/api/getTurnos
+	
+	http://127.0.0.1:5000/api/getTurnoById/32
+	
+	http://127.0.0.1:5000/api/getTurnoByPatente/ABC123
+
+Método POST
+	http://127.0.0.1:5000/api/crearTurno
+	
+	Body JSON Content
+		{
+		"fecha": "2024-07-01",
+		"hora": "11:00:00",
+		"mail_persona": "sbowmen0@ox.ac.uk",
+		"nombre_persona": "José Perez",
+		"patente_vehiculo": "ABC123",
+		"servicio_costo": "10500.00",
+		"servicio_descripcion": "Limpieza Exterior Premium",
+		"telefono_persona": "4569-8534"
+		}
+	
+Método PUT
+	http://127.0.0.1:5000/api/modificarTurno/DD615ZO
+	
+	Body JSON Content
+		{
+		  "fecha": "2028-07-30",
+		  "hora": "11:15:19",
+		  "mail_persona": "sbowmen0@gmail.co.uk",
+		  "nombre_persona": "José Perez",
+		  "patente_vehiculo": "DD615ZO",
+		  "servicio_costo": "10500.00",
+		  "servicio_descripcion": "Limpieza Exterior Premium",
+		  "telefono_persona": "4569-8534"
+		}
+
+Método DELETE
+	http://127.0.0.1:5000/api/deleteTurno/40
+	
+	http://127.0.0.1:5000/api/deleteTurno/ABC123
