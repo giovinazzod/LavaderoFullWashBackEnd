@@ -2,6 +2,7 @@ import os
 import mysql.connector
 from flask import g
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
@@ -34,4 +35,5 @@ def close_db(e=None):
 # Función para inicializar la aplicación con el manejo de la base de datos
 def init_app(app):
     # Registrar 'close_db' para que se ejecute al final del contexto de la aplicación
+    CORS(app)
     app.teardown_appcontext(close_db)
